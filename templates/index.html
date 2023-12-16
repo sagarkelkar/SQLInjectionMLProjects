@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <body>
+<!--      <img src="sql-injection.png" alt="SQL Injection" />-->
+      <h1 style="text-align:center;">SQL Injection Detection and Prevention using ML</h1>
+    	<div class="box" align="center">
+  			<h3>User Log In</h3>
+  			<form action="/" method="post">
+                <p>Username - <input type="text" name="username" id="username" placeholder="Username" required/></p>
+    			<br>
+    			<p>Password - <input type="password" name="password" id="password" placeholder="Password" required/></p>
+    			<br>
+    			<input type="submit" class="button" value="Log In"/>
+                <input type="reset" value="Reset"
+           onclick="document.getElementById('username').defaultValue = '';">
+  			</form>
+		</div>
+
+    <div class="footer">
+      <h4>Made by-</h4>
+        <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGunjan</h4>
+      <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSakshi</h4>
+      <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMember3</h4>
+      <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMember4</h4>
+    </div>
+
+    {%if users%}
+    <div class="users" style="margin-left:20%">
+      <h2>Registered Users List</h2>
+      <table style="width:100%;">
+        {%for user in users%}
+          <tr>
+            <td>{{user[0]}}</td>
+          </tr>
+        {%endfor%}
+      </table>
+    </div>
+    {%endif%}
+</body>
+</html>
